@@ -16,7 +16,7 @@ public class BoxUtil {
     }
 
     //вывести в консоль (toString()) объект второй коробки
-    public static void printElementFromTwoBoxes(final Box<Box> box) {
+    public static <T> void printElementFromTwoBoxes(final Box<Box<T>> box) {
         if (box.get() != null && box.get().get() != null) {
             System.out.println(box.get().get().toString());
         } else {
@@ -35,7 +35,7 @@ public class BoxUtil {
             } else {
                 System.out.println((String) null);
             }
-    }
+        }
     }
 }
 
